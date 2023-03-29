@@ -1,10 +1,11 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
+import logo from "../assets/img/logo.jpg";
 
 const MyNav = (props) => (
-  <Navbar bg="light" expand="lg">
+  <Navbar bg="primary" expand="lg" className="border-bottom">
     <Container fluid>
       <Navbar.Brand href="#home">
-        {props.brand} — {props.claim}
+        <img src={logo} alt="logo" style={{ width: "3rem" }} />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

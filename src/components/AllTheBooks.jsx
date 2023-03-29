@@ -23,7 +23,7 @@ class AllTheBooks extends Component {
     allTheBooks.sort(this.getRandomNumber);
 
     return (
-      <Container className="py-5 justify-content-center">
+      <Container className="py-5 justify-content-center border bg-primary rounded-4">
         <Row className="gap-3 justify-content-center">
           {allTheBooks.map((book, index) => (
             <Card
@@ -31,13 +31,20 @@ class AllTheBooks extends Component {
               key={`book-${index}`}
               className="p-2"
             >
-              <Card.Img variant="top" src={book.img} className=" rounded" />
-              <Card.Body>
+              <Card.Img
+                variant="top"
+                src={book.img}
+                className=" rounded"
+                style={{ height: "25rem" }}
+              />
+              <Card.Body className="px-1">
                 <Card.Title>{book.title}</Card.Title>
                 <Card.Text>{book.price + "$"}</Card.Text>
                 <Card.Text>{book.category}</Card.Text>
-                <Button variant="primary">Add</Button>
               </Card.Body>
+              <Button className="w-25" variant="success">
+                Add
+              </Button>
             </Card>
           ))}
           ;
